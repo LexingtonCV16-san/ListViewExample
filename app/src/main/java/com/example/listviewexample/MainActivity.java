@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Adapter;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -17,6 +18,7 @@ public class MainActivity extends AppCompatActivity  {
     int age;
     double worth;
     MyAdapter myArrayAdapter;
+    ImageView a,b,c,d;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,10 +34,14 @@ public class MainActivity extends AppCompatActivity  {
     //Todo  create a method getPlayers() that will create an array of 15 players and return the list of type List<Player>
     public ArrayList<Player> getPlayers(){
         ArrayList<Player> player = new ArrayList<Player>();
-        player.add(new Player("XiaoHong", 18, 2.5, "tennis"));
-        player.add(new Player("XiaoMing",80, 0,"Computer Game Player"));
-        player.add(new Player("XiaoLan",50, 3.2, "Chess"));
-        player.add(new Player("XiaoLan",20,5.7, "Card"));
+        a.setImageResource(R.drawable.card);
+        b.setImageResource(R.drawable.chess);
+        c.setImageResource(R.drawable.gamer);
+        d.setImageResource(R.drawable.tennis);
+        player.add(new Player("XiaoHong", 18, 2.5, "tennis",d));
+        player.add(new Player("Donib",80, 0,"Computer Game Player",c));
+        player.add(new Player("XiaoLan",50, 3.2, "Chess",b));
+        player.add(new Player("XiaoLan",20,5.7, "Card",a));
         return player;
     }
     // choose successful sportsmen from different sports, make sure to fill Player class before starting
