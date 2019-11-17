@@ -1,20 +1,26 @@
 package com.example.listviewexample;
 
+import android.content.res.Resources;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+
 public class Player {
     String name;
     int age;
     double worth;
     String main_sport;
+    String url;
 
     //Todo finish the class player
         // Todo 5 member variables
         //Todo name, age, worth(money), main sport and int image resource from drawable
 
-    public Player(String name,int age,double worth,String main_sport) {
+    public Player(String name,int age,double worth,String main_sport, String url) {
         this.name = name;
         this.age = age;
         this.worth = worth;
         this.main_sport=main_sport;
+        this.url= url;
     }
     public void setName(String name) {
         this.name = name;
@@ -51,7 +57,7 @@ public class Player {
         return main_sport;
     }
 
-
-//Todo create constructor and getters and setters
-        // use Android Studio for fast writing code, find Code->Generate
+    public String getUrl(){
+        return url;
+    }
 }

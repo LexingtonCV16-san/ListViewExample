@@ -2,6 +2,8 @@ package com.example.listviewexample;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Adapter;
@@ -28,14 +30,25 @@ public class MainActivity extends AppCompatActivity  {
         myArrayAdapter= new MyAdapter(getApplicationContext(), R.id.listview1, getPlayers());
         //ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, myArrayAdapter);
         listView.setAdapter(myArrayAdapter);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView <?> parent, View view, int position, long id) {
+                String url=myArrayAdapter.getItem(position).getUrl();
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+                startActivity(intent);
+            }
+        });
+
     }
     //Todo  create a method getPlayers() that will create an array of 15 players and return the list of type List<Player>
     public ArrayList<Player> getPlayers(){
         ArrayList<Player> player = new ArrayList<Player>();
-        player.add(new Player("XiaoHong", 18, 2.5, "tennis"));
-        player.add(new Player("XiaoMing",80, 0,"Computer Game Player"));
-        player.add(new Player("XiaoLan",50, 3.2, "Chess"));
-        player.add(new Player("XiaoLan",20,5.7, "Card"));
+        player.add(new Player("Aron Baynes", 33, 7, "NBA Basketball", "https://www.foxsports.com/nba/aron-baynes-player-stats"));
+        player.add(new Player("Reggie Bullock",28, 0,"NBA Basketball", "https://www.foxsports.com/nba/reggie-bullock-player-stats"));
+        player.add(new Player("Robert Covington",29, 6, "NBA Basketball", "https://www.foxsports.com/nba/robert-covington-player-stats"));
+        player.add(new Player("Derrick Favors",28,9, "NBA Basketball", "https://www.foxsports.com/nba/derrick-favors-player-stats"));
+        player.add(new Player("Patty Mills", 31, 10, "NBA Basketball", "https://www.foxsports.com/nba/patty-mills-player-stats"));
+        //player.add(new Player(""))
         return player;
     }
     // choose successful sportsmen from different sports, make sure to fill Player class before starting
