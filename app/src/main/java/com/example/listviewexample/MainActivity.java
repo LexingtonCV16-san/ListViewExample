@@ -31,11 +31,15 @@ public class MainActivity extends AppCompatActivity  {
     }
     //Todo  create a method getPlayers() that will create an array of 15 players and return the list of type List<Player>
     public ArrayList<Player> getPlayers(){
+        a.setImageResource(R.drawable.card);
+        b.setImageResource(R.drawable.chess);
+        c.setImageResource(R.drawable.game);
+        d.setImageResource(R.drawable.tennis);
         ArrayList<Player> player = new ArrayList<Player>();
-        player.add(new Player("XiaoHong", 18, 2.5, "tennis"));
-        player.add(new Player("XiaoMing",80, 0,"Computer Game Player"));
-        player.add(new Player("XiaoLan",50, 3.2, "Chess"));
-        player.add(new Player("XiaoLan",20,5.7, "Card"));
+        player.add(new Player("XiaoHong", 18, 2.5, "tennis",d));
+        player.add(new Player("XiaoMing",80, 0,"Computer Game Player",c));
+        player.add(new Player("XiaoLan",50, 3.2, "Chess",b));
+        player.add(new Player("XiaoLan",20,5.7, "Card",a));
         return player;
     }
     // choose successful sportsmen from different sports, make sure to fill Player class before starting
