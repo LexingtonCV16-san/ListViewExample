@@ -17,15 +17,16 @@ public class Player {
         this.main_sport=main_sport;
         this.picture=picture;
     }
-     public ImageView getPicture() {
+    public ImageView getPicture() {
         return picture;
     }
 
     public void setPicture(ImageView picture) {
         this.picture = picture;
     }
-     public void setPicture(ImageView picture) {
-        this.picture=picture;
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public void setAge(int age) {
