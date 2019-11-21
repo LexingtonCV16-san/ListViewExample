@@ -1,24 +1,37 @@
 package com.example.listviewexample;
+import android.graphics.drawable.Drawable;
+import android.widget.ImageView;
 
 public class Player {
     String name;
     int age;
     double worth;
     String main_sport;
-    ImageView picture;
+
+    String url;
+    int pictureAddress;
+
     //Todo finish the class player
         // Todo 5 member variables
         //Todo name, age, worth(money), main sport and int image resource from drawable
 
-    public Player(String name,int age,double worth,String main_sport, ImageView picture) {
+
+
+    public int getPictureAddress() {
+        return pictureAddress;
+    }
+
+    public void setPictureAddress(int pictureAddress) {
+        this.pictureAddress = pictureAddress;
+    }
+
+    public Player(String name, int age, double worth, String main_sport, String url, int pictureAddress) {
         this.name = name;
         this.age = age;
         this.worth = worth;
         this.main_sport=main_sport;
-        this.picture=picture;
-    }
-    public ImageView getPicture() {
-        return picture;
+        this.url= url;
+        this.pictureAddress=pictureAddress;
     }
 
     public void setPicture(ImageView picture) {
@@ -60,7 +73,7 @@ public class Player {
         return main_sport;
     }
 
-
-//Todo create constructor and getters and setters
-        // use Android Studio for fast writing code, find Code->Generate
+    public String getUrl(){
+        return url;
+    }
 }
