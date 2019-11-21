@@ -2,6 +2,10 @@ package com.example.listviewexample;
 import android.graphics.drawable.Drawable;
 import android.widget.ImageView;
 
+import android.content.res.Resources;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+
 public class Player {
     String name;
     int age;
@@ -10,9 +14,12 @@ public class Player {
     String url;
     int pictureAddress;
 
+
+
     //Todo finish the class player
         // Todo 5 member variables
         //Todo name, age, worth(money), main sport and int image resource from drawable
+
 
 
 
@@ -25,11 +32,13 @@ public class Player {
     }
 
     public Player(String name, int age, double worth, String main_sport, String url, int pictureAddress) {
+
         this.name = name;
         this.age = age;
         this.worth = worth;
         this.main_sport=main_sport;
         this.url= url;
+
         this.pictureAddress=pictureAddress;
 
     }

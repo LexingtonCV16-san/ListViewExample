@@ -46,6 +46,7 @@ public class MainActivity extends AppCompatActivity  {
 
 
         ArrayList<Player> player = new ArrayList<Player>();
+
         player.add(new Player("Aron Baynes", 33, 7, "NBA Basketball", "https://www.foxsports.com/nba/aron-baynes-player-stats",R.drawable.aron));
         player.add(new Player("Reggie Bullock",28, 0,"NBA Basketball", "https://www.foxsports.com/nba/reggie-bullock-player-stats",R.drawable.reggie));
         player.add(new Player("Robert Covington",29, 6, "NBA Basketball", "https://www.foxsports.com/nba/robert-covington-player-stats",R.drawable.robert));
