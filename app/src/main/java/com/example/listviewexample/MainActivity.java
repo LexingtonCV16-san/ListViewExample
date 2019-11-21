@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity  {
     int age;
     double worth;
     MyAdapter myArrayAdapter;
+    ImageView a,b,c,d;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,6 +44,7 @@ public class MainActivity extends AppCompatActivity  {
     //Todo  create a method getPlayers() that will create an array of 15 players and return the list of type List<Player>
     public ArrayList<Player> getPlayers(){
 
+
         ArrayList<Player> player = new ArrayList<Player>();
         player.add(new Player("Aron Baynes", 33, 7, "NBA Basketball", "https://www.foxsports.com/nba/aron-baynes-player-stats",R.drawable.aron));
         player.add(new Player("Reggie Bullock",28, 0,"NBA Basketball", "https://www.foxsports.com/nba/reggie-bullock-player-stats",R.drawable.reggie));
@@ -50,6 +52,7 @@ public class MainActivity extends AppCompatActivity  {
         player.add(new Player("Derrick Favors",28,9, "NBA Basketball", "https://www.foxsports.com/nba/derrick-favors-player-stats",R.drawable.derrick));
         player.add(new Player("Patty Mills", 31, 10, "NBA Basketball", "https://www.foxsports.com/nba/patty-mills-player-stats",R.drawable.patty));
         //player.add(new Player(""))
+
         return player;
     }
     // choose successful sportsmen from different sports, make sure to fill Player class before starting

@@ -9,9 +9,11 @@ public class Player {
     String main_sport;
     String url;
     int pictureAddress;
+
     //Todo finish the class player
         // Todo 5 member variables
         //Todo name, age, worth(money), main sport and int image resource from drawable
+
 
 
     public int getPictureAddress() {
@@ -29,7 +31,14 @@ public class Player {
         this.main_sport=main_sport;
         this.url= url;
         this.pictureAddress=pictureAddress;
+
     }
+
+    public void setPicture(ImageView picture) {
+        this.picture = picture;
+
+    }
+
     public void setName(String name) {
         this.name = name;
     }
